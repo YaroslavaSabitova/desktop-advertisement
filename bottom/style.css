@@ -1,0 +1,65 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  margin: auto;
+  position: relative;
+  background-color: #161528;
+}
+
+.background {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+}
+
+.shape {
+  width: calc((1136/960)*100%);
+  height: calc((1135/100)*100%);
+  background-image: url("./assets/shape.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: calc((-415/100) * 100%);
+  left: calc((-945/960) * 100%);
+}
+
+.text {
+  width: calc((427/960)*100%);
+  height: calc((58/100)*100%);
+  background-image: url("./assets/text.png");
+  top: calc((22/100)*100%);
+  left: calc((209/960)*100%);
+}
+
+.line {
+  width: calc((2/960)*100%);
+  height: calc((65/100)*100%);
+  background-image: url("./assets/line.svg");
+  top: calc((19/100)*100%);
+  left: calc((700/960)*100%);
+}
+
+.btn {
+  width: calc((188/960)*100%);
+  height: calc((37/100)*100%);
+  background-image: url("./assets/btn.svg");
+  left: calc((737/960)*100%);
+  top: calc((32/100)*100%);
+}

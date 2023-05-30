@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.background {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+}
+
+.bg {
+    width: 100%;
+    height: 100%;
+    max-width: 1920px;
+    max-height: 970px;
+    min-height: 970px;
+    position: absolute;
+    background-color: #161528;
+    top: 0;
+    left: 0;
+}
+
+.bg.big{
+    min-height: 970px;
+}
+
+.bg.medium{
+    min-height: 970px;
+}
+
+.bg.small{
+    min-height: 970px;
+}
+
+.title-top {
+    top: calc((77/960) * 100%);
+    transform: translate(0, 50%);
+    width: calc((960/960)*100%);
+    height: calc((93/250)*100%);
+    background-image: url("./assets/title-top.png");
+}
+
+.shape {
+    width: calc((1136/960)*100%);
+    height: calc((1135/250)*100%);
+    background-image: url("./assets/shape.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: calc((-2272/960) * 100%);
+    left: calc((-236/250) * 100%);
+}
+
+/*Preload*/
+
+.preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: #000000;
+    z-index: 1001;
+}
+
+.preloader__row {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 70px;
+    height: 70px;
+    margin-top: -35px;
+    margin-left: -35px;
+    text-align: center;
+    animation: preloader-rotate 2s infinite linear;
+}
+
+.preloader__item {
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    background-color: #337ab7;
+    border-radius: 100%;
+    width: 35px;
+    height: 35px;
+    animation: preloader-bounce 2s infinite ease-in-out;
+}
+
+.preloader__item:last-child {
+    top: auto;
+    bottom: 0;
+    animation-delay: -1s;
+}
+
+@keyframes preloader-rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes preloader-bounce {
+
+    0%,
+    100% {
+        transform: scale(0);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+}
+
+.loaded_hiding .preloader {
+    transition: 0.3s opacity;
+    opacity: 0;
+}
+
+.loaded .preloader {
+    display: none;
+}
