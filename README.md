@@ -1,6 +1,7 @@
 # desktop-advertisement
 
 To watch the example of desktop advertisement, please download the project on your computer and open file "index.html" or follow the link https://yaroslavasabitova.github.io/desktop-advertisement/ 
+
 If you use AdBlock extension, please, switch it off. 
 Thank you.
 
